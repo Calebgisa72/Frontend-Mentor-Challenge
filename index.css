@@ -1,0 +1,69 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(45, 111, 187);
+}
+button{
+    height: 40px;
+    box-shadow: 0px 4px 10px rgba(168, 125, 125, 0.4);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.reset{
+    width: 130px;
+    background-color: rgb(136, 4, 4);
+    color: white;
+}
+.Delete{
+    background-color: rgb(173, 16, 16);
+    color: white;
+    font-size: 15px;
+}
+.equals{
+    width: 130px;
+    background-color: rgb(64, 100, 3);
+    color: white;
+    font-size: 30px;
+}
+
+.calculator{
+    padding: 0;
+    width: 350px;
+    height: 450px;
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.screen{
+    height: 65px;
+    border-radius: 10px;
+    background-color: rgb(12, 35, 59);
+    color: white;
+    text-align: right;
+    padding: 20px 20px 0px 0px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.keys{
+    height: 280px;
+    border-radius: 10px;
+    background-color: rgba(9, 65, 103, 0.696);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    justify-content: center;
+}
+.upper{
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+    column-gap: 30px;
+    row-gap: 20px;
+}
+.lower{
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}

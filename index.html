@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+
+  <div class="calculator">
+
+    <div class="screen js-screen"></div>
+
+    <div class="keys">
+      <div class="upper">
+        <button onclick="
+        getKey('1')
+      ">1</button>
+      
+      <button onclick="
+        getKey('2')
+      ">2</button>
+
+      <button onclick="
+        getKey('3')
+      ">3</button>
+
+      <button class="Delete" onclick="
+      delet()
+      ">DEL</button>
+
+      <button onclick="
+        getKey('4')
+      ">4</button>
+      
+      <button onclick="
+        getKey('5')
+      ">5</button>
+
+      <button onclick="
+        getKey('6')
+      ">6</button>
+
+      <button onclick="
+      getKey(' + ')
+      ">+</button>
+
+      <button onclick="
+        getKey('7')
+      ">7</button>
+      
+      <button onclick="
+        getKey('8')
+      ">8</button>
+
+      <button onclick="
+        getKey('9')
+      ">9</button>
+
+      <button onclick="
+      getKey(' - ')
+      ">-</button>
+      
+      <button onclick="
+        getKey('.')
+      ">.</button>
+
+      <button onclick="
+      getKey('0')
+      ">0</button>
+
+      <button onclick="
+      getKey(' / ')
+      ">/</button>
+
+      <button onclick="
+      getKey(' * ')
+      ">x</button>
+
+      </div>
+
+      <div class="lower">
+        <button class="reset" onclick="resetCalculation()">Reset</button>
+
+        <button class="equals" onclick="
+        getAnswer();
+      " >=</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    let calculation = '';
+    
+      function getKey(keyClicked){
+      calculation += keyClicked;
+      document.querySelector('.js-screen').innerHTML= calculation;
+    }
+
+    function getAnswer(){
+      calculation = eval(calculation);
+      document.querySelector('.js-screen').innerHTML= calculation;
+    }
+
+    function resetCalculation(){
+      calculation = '';
+      document.querySelector('.js-screen').innerHTML= calculation;
+    }
+
+    function delet(){
+      let calcArray = calculation.split('');
+      calcArray.pop();
+      let after = calcArray.join('');
+      calculation = after;
+      document.querySelector('.js-screen').innerHTML= calculation;
+    }
+
+  </script>
+  
+</body>
+</html>
